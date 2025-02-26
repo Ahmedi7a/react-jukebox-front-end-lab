@@ -1,3 +1,4 @@
+/* Root Container */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,19 +6,25 @@
   text-align: center;
 }
 
+/* Logo Styles */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  transition: filter 300ms, transform 300ms;
 }
 
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+  transform: scale(1.05);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+  transform: scale(1.05);
+}
+
+/* Logo Animation */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -33,10 +40,113 @@
   }
 }
 
+/* Card Styles */
 .card {
   padding: 2em;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 1.5rem 0;
 }
 
+/* Text for Read the Docs */
 .read-the-docs {
   color: #888;
+  font-size: 1.2rem;
+}
+
+/* Track Item Styles */
+.track-item {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.track-item:hover {
+  background-color: #555;
+  cursor: pointer;
+}
+
+/* Details Container */
+.details-container {
+  background-color: #983b05;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 1.5rem;
+  background-color: #222;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #61dafb;
+  background-color: #444;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #bbb;
+}
+
+button {
+  background-color: #ba4705;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Responsive Form Styling */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.5em;
+  }
+
+  form {
+    padding: 1rem;
+  }
+
+  button {
+    padding: 10px 15px;
+  }
 }
