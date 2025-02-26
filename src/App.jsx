@@ -32,10 +32,10 @@ function App() {
   }
 
   function handleFormView(track) {
-    // if (!track.title) setSelected(null);
-    // setIsFormOpen(!isFormOpen);
-    setSelected(track);
+    if (!track.title) setSelected(null);
     setIsFormOpen(!isFormOpen);
+    // setSelected(track);
+    // setIsFormOpen(!isFormOpen);
   }
 
   //for creating new Track
